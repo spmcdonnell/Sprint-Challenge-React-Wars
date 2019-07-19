@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
+import './components/StarWars.css';
 import CharCard from './components/CharCard';
 
 const App = () => {
@@ -22,9 +23,9 @@ const App = () => {
     return (
         <div className="App">
             <h1 className="Header">React Wars</h1>
-            <div className="card-container">
+            <div className="cards">
                 {people.map(person => {
-                    return <CharCard person={person} />;
+                    return <CharCard key={person.name} person={person} />;
                 })}
             </div>
         </div>
