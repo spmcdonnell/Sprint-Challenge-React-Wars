@@ -26,13 +26,23 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 -   [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+React is a front end library/framework for web (and now mobile too) development. It attempts to make manageable the prospect of building complex, large scale applications that could otherwise become unwieldy. Main concepts include the use of JSX syntax which cuts down and the repative tedium of interacting with the DOM in vanilla JS, the use of modular component based design to maximize maintainability/reusability, and automatic rerendering triggered by changes in state that allow easy development os SPA's.
+
 -   [ ] What does it mean to _think_ in react?
+
+You think about how to structure code in a way that takes advantage of the power of react and promotes organization, maintainability, and reusability. The means thinking about how to break out functionality out into separate components that interact with one another, and how you want to store data and have it flow through your application.
 
 -   [ ] Describe state.
 
+State is just a piece of data. It could be of any type (object, string, etc), but will be associated with a particular component it is defined it. It tracks some meaningful aspect of the site and can be update to reflect changes on the site. The state can be passed to child components that use it as props, and when state changes, a rerender is trigger, and all the children receive updated info (props).
+
 -   [ ] Describe props.
 
+Props is just some data you pass to a component. It could be of any type (boolean, array, etc), and is often the state of a parent component. When the state changes, so do the props, and a rerender is triggered to update the new info that all children received as props. Props should not be directly modified.
+
 -   [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+
+I think the official definition is just something that has an effect (intended or unintended) on other things that are outside the scope of a particular function. Sync effects to state and props changes would be done by, for example, calling an API inside useEffect hook (or previously componentDidMount/componentDidUpdate), and using the appropriate function to update state, which in turn updates props and rerenders.
 
 ## Project Set Up
 
